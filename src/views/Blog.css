@@ -36,5 +36,10 @@
     font-weight: 600;
     padding-bottom: 12px;
 }
+.btn {
+    margin: 10px 0;
+    cursor: pointer;
+
+}
 
 

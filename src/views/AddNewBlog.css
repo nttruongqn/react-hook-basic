@@ -1,0 +1,23 @@
+.form-container{
+    border: 1px solid #ccc;
+    width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: left;
+
+}
+.form-item{
+    margin:12px 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form-container span{
+    display: block;
+    padding-bottom: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+

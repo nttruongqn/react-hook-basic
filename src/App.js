@@ -9,6 +9,7 @@ import Covid from "./views/Covid";
 import { BrowserRouter as Router, Route, NavLink ,Switch} from "react-router-dom";
 import Blog from "./views/Blog";
 import DetailBlog from "./views/DetailBlog";
+import AddNewBlog from "./views/AddNewBlog";
 
 function App() {
   //state
@@ -92,6 +93,9 @@ function App() {
           </Route>
           <Route path="/blog/:id">
             <DetailBlog />
+          </Route>
+          <Route path="/add-new-blog">
+            <AddNewBlog />
           </Route>
         </Switch>
       </div>

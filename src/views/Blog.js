@@ -13,7 +13,11 @@ const Blog = () => {
         console.log('check newData',newData)
     }
     return (
-       
+        <>
+            <div > <button className="btn">
+                <Link to ={`/add-new-blog`}>
+                + Add Blog </Link>
+                </button></div>
         <div className="blogs-container">
             <div className="blogs-row">
                 {loading === false && newData && newData.length > 0 && newData.map(item => {
@@ -40,7 +44,8 @@ const Blog = () => {
              
             </div>
           
-         </div>
+            </div>
+        </>
     )
 }
 
