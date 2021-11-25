@@ -1,0 +1,7 @@
+.blog-detail{
+    border: 1px solid #ccc;
+    width: 600px;
+    min-height: 100px;
+    padding:15px;
+    margin: 0 auto;
+}

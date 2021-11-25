@@ -2,8 +2,13 @@ import logo from "./logo.svg";
 import "./App.css";
 import Nav from "./views/Nav";
 import Todo from "./views/Todo";
-import Covid from "./views/Covid";
+
 import { useState, useEffect } from "react";
+import Covid from "./views/Covid";
+
+import { BrowserRouter as Router, Route, NavLink ,Switch} from "react-router-dom";
+import Blog from "./views/Blog";
+import DetailBlog from "./views/DetailBlog";
 
 function App() {
   //state
@@ -46,37 +51,51 @@ function App() {
 
   //re-render
   return (
-    <div className="App">
-      <header className="App-header">
-        <Nav />
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Hello {name}</h1>
-        <Covid />
-        {/* <Todo todos={todos}
-        deleteDataTodo = { deleteDataTodo }
-        />
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <Nav />
+          <img src={logo} className="App-logo" alt="logo" />
+          {/* <h1>Hello {name}</h1> */}
+        </header>
 
-        <Todo todos={todos.filter((item) => item.type === "truong")}
-        deleteDataTodo = { deleteDataTodo }/>
-        
-        <input
-          type="text"
-          value={address}
-          onChange={(event) => handleOnChange(event)}
-        />
-        <button
-          type="button"
-          className="btn"
-          onClick={() => {
-            handleOnClick();
-          }}
-        >
-          Click me
-        </button> */}
-    
+        <Switch>
+          <Route path="/" exact >
+            <Covid />
+          </Route>
+          
+          <Route path="/todos">
+            <Todo todos={todos} deleteDataTodo={deleteDataTodo} />
 
-      </header>
-    </div>
+            <Todo
+              todos={todos.filter((item) => item.type === "truong")}
+              deleteDataTodo={deleteDataTodo}
+            />
+
+            <input
+              type="text"
+              value={address}
+              onChange={(event) => handleOnChange(event)}
+            />
+            <button
+              type="button"
+              className="btn"
+              onClick={() => {
+                handleOnClick();
+              }}
+            >
+              Click me
+            </button>
+          </Route>
+          <Route path="/blog" exact>
+            <Blog />
+          </Route>
+          <Route path="/blog/:id">
+            <DetailBlog />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

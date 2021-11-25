@@ -1,0 +1,40 @@
+.blogs-container{
+    width: 1200px;
+    margin: 0 auto;
+;
+}
+
+.blogs-row{
+    display: flex;
+    margin-left:-5px;
+    margin-right: -5px;
+    flex-wrap: wrap;
+  
+  
+  }
+  
+  .col-3 {
+    width: 25%;
+  }
+
+
+.blogs-row .single-blog{
+    margin: 5px;
+    min-height: 300px;
+    border: 1px solid #ccc;
+    text-align: left;
+    padding:10px
+}
+
+
+.single-blog .main{
+    min-height: 250px;
+}
+
+.single-blog .title {
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 12px;
+}
+
+
